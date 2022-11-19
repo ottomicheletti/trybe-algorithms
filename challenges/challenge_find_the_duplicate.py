@@ -5,11 +5,7 @@ def find_duplicate(nums):
     if not nums or not isinstance(nums, list):
         return False
 
-    _nums = []
-
-    for n in nums:
-        if n not in _nums:
-            _nums.append(n)
+    _nums = list(dict.fromkeys(nums))
 
     result = mode(nums)
 
